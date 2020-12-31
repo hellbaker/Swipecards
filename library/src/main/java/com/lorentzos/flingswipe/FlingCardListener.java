@@ -224,12 +224,14 @@ public class FlingCardListener implements View.OnTouchListener {
     }
 
 
+    private float leftBorderMultiplier = 0.35f;
+
     public float leftBorder() {
-        return parentWidth / 4.f;
+        return parentWidth * leftBorderMultiplier;
     }
 
     public float rightBorder() {
-        return 3 * parentWidth / 4.f;
+        return parentWidth * (1 - leftBorderMultiplier);
     }
 
 
